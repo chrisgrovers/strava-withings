@@ -14,6 +14,7 @@ new Vue({
         token: null
       },
     },
+    
     ready: function()  {
       console.log('ready');
       debugger;
