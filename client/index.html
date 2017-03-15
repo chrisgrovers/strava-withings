@@ -1,31 +1,35 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-<title>Strava Withings Tool</title>
-  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <head>
+  <title>Strava Withings Tool</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
 
-</head>
-<body>
+  </head>
+  <body>
 
     <div id="app">
-      <div id="login">
-        <div id="strava-login form-group" class="input-container">
-          <input class="username form-control" v-model="data.user.strava.username"></input>
-          <input class="password form-control" v-model="data.user.strava.password"></input>
+      <div id="login" class="panel">
+        <div id="api-settings" class="panel-header">
+          API Settings
         </div>
-        <div id="withings-login form-group" class="input-container">
-          <input class="username form-control" v-model="data.user.withings.username"></input>
-          <input class="password form-control" v-model="data.user.withings.password"></input>
+        <div id="api-settings-body" class="panel-body">
+          <div id="strava-login form-group" class="input-container">
+            <input class="username form-control" v-model="user.strava.username"></input>
+            <input class="password form-control" v-model="user.strava.password"></input>
+          </div>
+          <div id="withings-login form-group" class="input-container">
+            <input class="username form-control" v-model="user.withings.username"></input>
+            <input class="password form-control" v-model="user.withings.password"></input>
+          </div>
+          <button class="btn btn-primary">Submit</button>
         </div>
-        <button class="btn btn-primary" v-on="click: addEvent">Submit</button>
       </div>
-       test: {{data}} <br>
-       data.user.withings.username: {{data.user.withings.username}} <br>
-       message: {{message}} 
+       test: {{user}} <br>
+       data.user.withings.username: {{user.withings.username}} <br>
+       message: {{message}}
     </div>
-
     <script src="./node_modules/vue/dist/vue.min.js"></script>
     <script src="./app/app.js"></script>
-</body>
+  </body>
 </html>
